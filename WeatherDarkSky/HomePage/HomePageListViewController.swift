@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class HomePageListViewController: UIViewController {
 
@@ -28,6 +29,8 @@ class HomePageListViewController: UIViewController {
             }
         }
     }
+    
+    var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +72,12 @@ class HomePageListViewController: UIViewController {
     }
     
     @objc private func rightButtonTapped(){
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.requestLocation()
         
+        locationManager.startUpdatingLocation()
     }
 }
 
@@ -90,5 +98,21 @@ extension HomePageListViewController:UITableViewDelegate,UITableViewDataSource{
         }
         
         return UITableViewCell()
+    }
+}
+
+extension HomePageListViewController:CLLocationManagerDelegate{
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last{
+            self.getDarkSkyWeather(latitude: CGFloat(location.coordinate.latitude), longitude: CGFloat(location.coordinate.longitude))
+            locationManager.stopUpdatingLocation()
+        }
+    }
+    func locationManager(_ manager: CLLocationManager, didFinishDeferredUpdatesWithError error: Error?) {
+        //do nothing
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        //do nothing
     }
 }
