@@ -99,6 +99,18 @@ extension HomePageListViewController:UITableViewDelegate,UITableViewDataSource{
         
         return UITableViewCell()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let summary = weather?.daily?.summary else {
+            return
+        }
+        
+        let weatherDetailsVC = WeatherDetailsViewController()
+        weatherDetailsVC.summary = summary
+        
+        navigationController?.pushViewController(weatherDetailsVC, animated: true)
+
+    }
 }
 
 extension HomePageListViewController:CLLocationManagerDelegate{
