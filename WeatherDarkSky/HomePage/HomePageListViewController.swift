@@ -92,7 +92,7 @@ extension HomePageListViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let timeZone = weather?.timezone, let dailyData = weather?.daily?.data else {
+        guard let timeZone = weather?.timezone, let dailyData = weather?.daily?.data, indexPath.row < dailyData.count else {
             return UITableViewCell()
         }
         
