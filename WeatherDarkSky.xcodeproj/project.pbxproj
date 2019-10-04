@@ -3,27 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E9175000485EA5C4C8CD7C0 /* Pods_WeatherDarkSky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E45CAAA59186C158068199 /* Pods_WeatherDarkSky.framework */; };
 		92374DDB234735070070D248 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92374DDA234735070070D248 /* AppDelegate.swift */; };
-		92374DDD234735070070D248 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92374DDC234735070070D248 /* SceneDelegate.swift */; };
 		92374DDF234735070070D248 /* HomePageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92374DDE234735070070D248 /* HomePageListViewController.swift */; };
-		92374DE2234735070070D248 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92374DE0234735070070D248 /* Main.storyboard */; };
 		92374DE4234735080070D248 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92374DE3234735080070D248 /* Assets.xcassets */; };
 		92374DE7234735080070D248 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92374DE5234735080070D248 /* LaunchScreen.storyboard */; };
+		92804E2023473937000C1638 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92804E1F23473937000C1638 /* WeatherModel.swift */; };
+		92804E2323473EA0000C1638 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92804E2223473EA0000C1638 /* NetworkTools.swift */; };
+		92804E25234742E0000C1638 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92804E24234742E0000C1638 /* WeatherTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28E45CAAA59186C158068199 /* Pods_WeatherDarkSky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherDarkSky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EB8BA673EC14C8198EC6432 /* Pods-WeatherDarkSky.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherDarkSky.release.xcconfig"; path = "Target Support Files/Pods-WeatherDarkSky/Pods-WeatherDarkSky.release.xcconfig"; sourceTree = "<group>"; };
 		92374DD7234735070070D248 /* WeatherDarkSky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherDarkSky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92374DDA234735070070D248 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		92374DDC234735070070D248 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		92374DDE234735070070D248 /* HomePageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageListViewController.swift; sourceTree = "<group>"; };
-		92374DE1234735070070D248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92374DE3234735080070D248 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92374DE6234735080070D248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92374DE8234735080070D248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92804E1F23473937000C1638 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		92804E2223473EA0000C1638 /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		92804E24234742E0000C1638 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
+		C3E7EBFB9CE7984F5F816330 /* Pods-WeatherDarkSky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherDarkSky.debug.xcconfig"; path = "Target Support Files/Pods-WeatherDarkSky/Pods-WeatherDarkSky.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E9175000485EA5C4C8CD7C0 /* Pods_WeatherDarkSky.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DC5102C3693A028766D1E3D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3E7EBFB9CE7984F5F816330 /* Pods-WeatherDarkSky.debug.xcconfig */,
+				6EB8BA673EC14C8198EC6432 /* Pods-WeatherDarkSky.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		92374DCE234735070070D248 = {
 			isa = PBXGroup;
 			children = (
 				92374DD9234735070070D248 /* WeatherDarkSky */,
 				92374DD8234735070070D248 /* Products */,
+				0DC5102C3693A028766D1E3D /* Pods */,
+				E51E32CEAC867814652CED65 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,10 +74,9 @@
 		92374DD9234735070070D248 /* WeatherDarkSky */ = {
 			isa = PBXGroup;
 			children = (
+				92804E2123473D9A000C1638 /* Utils */,
 				92374DEE2347352A0070D248 /* HomePage */,
 				92374DDA234735070070D248 /* AppDelegate.swift */,
-				92374DDC234735070070D248 /* SceneDelegate.swift */,
-				92374DE0234735070070D248 /* Main.storyboard */,
 				92374DE3234735080070D248 /* Assets.xcassets */,
 				92374DE5234735080070D248 /* LaunchScreen.storyboard */,
 				92374DE8234735080070D248 /* Info.plist */,
@@ -71,8 +88,26 @@
 			isa = PBXGroup;
 			children = (
 				92374DDE234735070070D248 /* HomePageListViewController.swift */,
+				92804E1F23473937000C1638 /* WeatherModel.swift */,
+				92804E24234742E0000C1638 /* WeatherTableViewCell.swift */,
 			);
 			path = HomePage;
+			sourceTree = "<group>";
+		};
+		92804E2123473D9A000C1638 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				92804E2223473EA0000C1638 /* NetworkTools.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E51E32CEAC867814652CED65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28E45CAAA59186C158068199 /* Pods_WeatherDarkSky.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,9 +117,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92374DEB234735080070D248 /* Build configuration list for PBXNativeTarget "WeatherDarkSky" */;
 			buildPhases = (
+				35961D8C5145C5A699E855D6 /* [CP] Check Pods Manifest.lock */,
 				92374DD3234735070070D248 /* Sources */,
 				92374DD4234735070070D248 /* Frameworks */,
 				92374DD5234735070070D248 /* Resources */,
+				477213C24A6FC1485E3953A0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,34 +172,69 @@
 			files = (
 				92374DE7234735080070D248 /* LaunchScreen.storyboard in Resources */,
 				92374DE4234735080070D248 /* Assets.xcassets in Resources */,
-				92374DE2234735070070D248 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		35961D8C5145C5A699E855D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeatherDarkSky-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		477213C24A6FC1485E3953A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeatherDarkSky/Pods-WeatherDarkSky-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeatherDarkSky/Pods-WeatherDarkSky-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeatherDarkSky/Pods-WeatherDarkSky-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		92374DD3234735070070D248 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92804E25234742E0000C1638 /* WeatherTableViewCell.swift in Sources */,
 				92374DDF234735070070D248 /* HomePageListViewController.swift in Sources */,
 				92374DDB234735070070D248 /* AppDelegate.swift in Sources */,
-				92374DDD234735070070D248 /* SceneDelegate.swift in Sources */,
+				92804E2023473937000C1638 /* WeatherModel.swift in Sources */,
+				92804E2323473EA0000C1638 /* NetworkTools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		92374DE0234735070070D248 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				92374DE1234735070070D248 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		92374DE5234735080070D248 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -290,6 +362,7 @@
 		};
 		92374DEC234735080070D248 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3E7EBFB9CE7984F5F816330 /* Pods-WeatherDarkSky.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -307,6 +380,7 @@
 		};
 		92374DED234735080070D248 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EB8BA673EC14C8198EC6432 /* Pods-WeatherDarkSky.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
