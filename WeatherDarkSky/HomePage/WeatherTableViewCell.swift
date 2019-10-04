@@ -99,7 +99,7 @@ class WeatherTableViewCell: UITableViewCell {
         
         dayLabel.text = formatter.string(from: date)
         highLabel.text = "H:\(high)"
-        lowLabel.text = "H:\(low)"
+        lowLabel.text = "L:\(low)"
         
     }
     
