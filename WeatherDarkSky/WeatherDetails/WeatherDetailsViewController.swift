@@ -19,6 +19,7 @@ class WeatherDetailsViewController: UIViewController {
         return label
     }()
     
+    // from data field
     var summary = ""{
         didSet{
             self.weatherSummarylabel.text = self.summary

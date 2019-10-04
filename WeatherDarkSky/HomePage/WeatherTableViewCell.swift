@@ -11,6 +11,7 @@ import SDWebImage
 
 class WeatherTableViewCell: UITableViewCell {
     
+    // show weather icon
     let iconImageView:UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -19,6 +20,7 @@ class WeatherTableViewCell: UITableViewCell {
         return imageView
     }()
     
+    // show short of weekday
     let dayLabel:UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -27,6 +29,7 @@ class WeatherTableViewCell: UITableViewCell {
         return label
     }()
     
+    // show high temp
     let highLabel:UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -35,6 +38,7 @@ class WeatherTableViewCell: UITableViewCell {
         return label
     }()
     
+    // show low temp
     let lowLabel:UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -89,8 +93,10 @@ class WeatherTableViewCell: UITableViewCell {
             return
         }
         
+        // To get the icon online.
         iconImageView.sd_setImage(with: URL.init(string: "https://darksky.net/images/weather-icons/\(icon).png"), completed: nil)
         
+        // To get the short of weekday
         let date = Date.init(timeIntervalSince1970: TimeInterval.init(time))
     
         let formatter = DateFormatter.init()

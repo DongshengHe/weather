@@ -22,6 +22,8 @@ class HomePageListViewController: UIViewController {
         return tableView
     }()
     
+    
+    // API model for dark sky api
     var weather:WeatherModel?{
         didSet{
             DispatchQueue.main.async {
@@ -30,12 +32,15 @@ class HomePageListViewController: UIViewController {
         }
     }
     
+    // location require manager
     var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         buildUI()
         addRightNavButton()
+        
+        // Los Angeles coordinate as default
         getDarkSkyWeather(latitude: 37.8267, longitude: -122.4233)
     }
 
@@ -101,7 +106,7 @@ extension HomePageListViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let summary = weather?.daily?.summary else {
+        guard let dailyData = weather?.daily?.data, indexPath.row < dailyData.count, let summary = dailyData[indexPath.row].summary else {
             return
         }
         

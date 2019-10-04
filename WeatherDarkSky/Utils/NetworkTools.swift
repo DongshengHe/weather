@@ -1,5 +1,5 @@
 //
-//  API.swift
+//  NetworkTools.swift
 //  WeatherDarkSky
 //
 //  Created by Tony He on 2019/10/4.
@@ -10,7 +10,6 @@ import Foundation
 import Alamofire
 
 class API{
-    //https://api.darksky.net/forecast/561b687e384f7403267229f3e4caedcc/37.8267,-122.4233
     
     private let darkskyPrivateKey = "561b687e384f7403267229f3e4caedcc"
     
